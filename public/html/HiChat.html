@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HiChat</title>
+	
+	<!-- <link rel="stylesheet" href="./css/main.css"> -->
+	<link rel="stylesheet" href="main.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/skin/layer.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/layer/2.3/layer.js"></script>
+	
+	<!-- <script src="./js/main.js"></script> -->
+	<script src="main.js"></script>
+	
+</head>
+<body @keydown.enter="login">
+	<div id="HiChat">
+		<div id="login">
+			<p id="loginText">Connect to Server....</p>
+			<div id="suc">
+				<input id="nickname" type="text" autofocus>
+			    <button @click="login">OK</button><!-- @keyup.enter="login" -->
+			</div>
+			
+		</div>
+		
+		<div id="container">
+			<header><h2>Welcome to HiChat</h2></header>
+			
+			<section>
+				<aside>
+					<div class="num"></div>
+				</aside>
+				<div id="content">
+					<div id="show">
+					</div>
+					<div id="send">
+						<ul class="sendOption">
+							<li><input type="color"/></li>
+							<li class="imageLi">
+								<input type="button" value="image">
+								<input type="file" class="sendimage" accept="image/*"/ value="image">
+							</li>
+							<li>
+								<input type="button" class="emoji" value="emoji"/>
+							</li>
+							<li><input type="button" class="clear" value="clear"/></li>
+							
+							
+						</ul>
+						
+						<textarea name="" id="" cols="30" rows="10" autofocus></textarea> 
+				        
+						<button class="send">send</button>
+						
+						
+					</div>
+					
+					   <div class="emojiWrap"></div>
+				</div>
+			</section>
+			
+			
+		</div>
+		
+	</div>
+	
+	
+	
+</body>
+		<!-- <img class="test" src="../../../../canvas/cover.jpg" alt="" style="display:none;" > -->
+		<img class="test" src="cover.jpg" alt="" style="display:none;" >
+</html>

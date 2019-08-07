@@ -1,0 +1,22 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+#login{
+	/* 此时这个遮罩层需要占满整个屏幕
+	 */
+	/* 先开启定位 */
+	/* position:absolute;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px; 
+	 */
+	width:48%;
+	height:90%;
+	margin:30px auto;
+	background-image: url(../jpg/login_bg.jpg);
+	opacity:0.6;
+	/* padding-top:300px; */
+	text-align: center;
+}

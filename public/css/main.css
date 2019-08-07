@@ -1,0 +1,210 @@
+*{
+	padding:0;
+	margin:0;
+	
+}
+	
+/* 连接服务器时的加载div，即遮罩层的样式 */
+#login1{
+	/* 此时这个遮罩层需要占满整个屏幕
+	 */
+	/* 先开启定位 */
+	position:absolute;
+	
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px; 
+	
+	
+	background: #05050582;
+	
+	padding-top:300px;
+	text-align: center;
+	
+	z-index: 999;
+	
+}
+/* 在页面刚刚加载出来，还没有成功建立连接时 */
+
+#suc{
+	display:none;
+}
+
+#container{
+	border:10px solid #dae2d34a;
+	margin:0px auto;
+	width:960px;
+	height:585px;
+	
+	border-radius: 10px;
+	
+}
+
+header{
+	width:100%;
+	height:13%;
+	background:#007bff12;
+	position:relative;
+}
+header h2{
+	position:absolute;
+	top:20px;
+}
+
+section{
+	width:100%;
+	height:87%;
+	
+}
+
+/* 设置一下上线人数字样的样式： */
+section .num{
+	color:#ff5722d4;
+	blod:800;
+	font-size:25px;
+	text-align: center;
+	
+}
+
+section aside{
+	width:20%;
+	height:100%;
+	background: #cddc392e;
+	float:left;
+}
+
+section #content{
+	width:80%;
+	height:100%;
+	background: #cacaca2b;
+	float:right;
+	position: relative;
+	
+}
+
+#content #show{
+	width:100%;
+	height:65%;
+	background: white;
+	
+	/* 解决一下：当用户在屏幕上发送的信息越来越多，屏幕开始显示不下的问题
+	   增加一个滚动条即可
+	 */
+    overflow-y: scroll;	
+}
+/* 给插入到#show中的每一个子元素设置一个margin-top */
+.showChild{
+	margin-bottom:30px;
+}
+/* show下面的p标签，全部为上线-下线信息 */
+#content #show p{
+	color:red;
+}
+
+#content #send textarea{
+	display:inline-block;
+	width:670px;
+	height:113px;
+	
+	/* 禁止用户在页面中拖动改变textarea的大小 */
+	resize:none;
+}
+#content #send ul {
+	width:100%;
+	height:44.891px;
+	/* border:1px solid black; */
+	
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	
+    margin-top:20px;
+	
+	position:relative;
+	
+}
+/* 设置ul中每个li之间的间隔 */
+#content #send ul li {
+	margin:0 20px;
+}
+
+#content #send ul li input{
+	width:50px;
+	height:30px;
+	background: #9e9e9e2b;
+	border:none;
+	border-radius: 5px;
+	color:#824848;
+	
+}
+
+#content #send button.send{
+	width:98px;
+	height:113px;
+	float:right;
+}
+
+/* 设置一下显示的图片的样式：将图片压缩显示 
+   压缩为屏幕宽度的50%；
+*/
+/* 清除一下包裹着img的a标签的默认hover样式 */
+#show a:hover{
+	text-decoration: none;
+	color:black;
+}
+#show .imgDiv{
+	width:25%;
+	background-size: 100%;
+	margin-bottom: 10px;
+}
+#show img{
+	display: block;
+	width:100%;
+	
+}
+
+/* 清除input type=file的默认样式
+  这句代码只能清除“未选择文件”的字样
+ */
+#send .imageLi{
+	position: relative;
+}
+#send input[type=file]{
+	width:59px;
+	opacity: 0;
+	position: absolute;
+	top:0;
+	left:0;
+	
+}
+/* 利用position自定义覆盖input[type=file]的样式 */
+#send input[type=button]{
+	/* position:absolute; */
+	/* 让“image”的input覆盖input[type=file]即可 */
+	/* z-index: 999; */
+	
+}
+
+/* 解决一下container高度塌陷问题：由于aside和section都浮动了~ */
+
+/* 设置一下表情容器的样式 */
+.emojiWrap{
+	width:100%;
+	height:208px;
+	position:absolute;
+	left:0px;
+	top:139px; 
+	
+	border-radius: 10px;
+	display: none;
+	
+	background: #9e9e9e73;
+	
+	/* top:300px; */
+}
+/* 设置ul中的拾色器的input */
+input[type=color]{
+	width:68px;
+	border:none;
+}
